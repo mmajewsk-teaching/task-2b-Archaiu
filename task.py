@@ -28,3 +28,18 @@
 #
 #Delete these comments before commit!
 #Good luck.
+
+from database import Database, Class
+
+
+def main():
+    biologyClass = Class("biology class", [{"name": "Michal Tusk", "points" : 32, "frequency" : 0.65},{"name": "Marcin Zepp", "points" : 3, "frequency" : 0.21},{"name": "igor x", "points" : 54, "frequency" : 0.81}])
+    database = Database([biologyClass])
+    print(database.return_average_frequency_in_class("biology class"))
+    print(database.return_average_points_in_class("biology class"))
+
+
+
+
+if __name__ == "__main__":
+    main()
